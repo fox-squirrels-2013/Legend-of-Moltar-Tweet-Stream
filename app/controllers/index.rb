@@ -33,3 +33,8 @@ end
 get '/activate' do
   erb :activate
 end
+
+get '/counts' do
+  @tweet_count = TweetCount.last
+  @tweet_count.to_json
+end
