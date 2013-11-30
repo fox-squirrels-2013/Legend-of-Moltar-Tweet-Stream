@@ -29,3 +29,7 @@ get '/' do
     end
   end
 end
+
+get '/activate' do
+  erb :activate
+end
