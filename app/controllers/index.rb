@@ -31,6 +31,7 @@ get '/' do
 end
 
 get '/activate' do
+  response['Access-Control-Allow-Origin'] = '*'
   erb :activate
 end
 
