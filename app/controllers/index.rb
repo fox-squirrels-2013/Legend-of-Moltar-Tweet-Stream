@@ -27,6 +27,5 @@ get '/' do
         @tweet_count.update_attribute(topic, attr_values[topic])
       end
     end
-    p "#{@tweet_count.coffee} coffee tweets, #{@tweet_count.tea} tea tweets, #{@tweet_count.canada} Canada tweets, #{@tweet_count.dbcsleeps} dbcsleeps tweets"
   end
 end
