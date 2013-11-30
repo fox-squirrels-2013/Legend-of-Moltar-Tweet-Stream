@@ -1,5 +1,5 @@
 get '/' do
-  response.headers['Access-Control-Allow-Origin'] = '*'
+  headers 'Access-Control-Allow-Origin' => '*'
 
   @tweet_count = TweetCount.last
   unless @tweet_count
