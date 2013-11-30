@@ -1,6 +1,4 @@
 get '/' do
-  headers 'Access-Control-Allow-Origin' => '*'
-
   @tweet_count = TweetCount.last
   unless @tweet_count
     @tweet_count = TweetCount.create
@@ -37,6 +35,7 @@ get '/activate' do
 end
 
 get '/counts' do
+  response['Access-Control-Allow-Origin'] = '*'
   @tweet_count = TweetCount.last
   @tweet_count.to_json
 end
